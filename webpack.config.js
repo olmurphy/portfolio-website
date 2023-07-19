@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     entry: {
@@ -16,9 +17,30 @@ module.exports = {
                 use: 'ts-loader'
             },
             {
+                test: /\.html$/,
+                use: 'html-loader'
+            },
+            {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
             }
         ]
-    }
+    },
+    resolve: {
+        extensions: [
+            ".ts",
+            ".js",
+            ".html"
+        ],
+        mainFields: [
+            'browser',
+            'main',
+            'module'
+        ]
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: "src/index.html"
+        })
+    ]
 }
