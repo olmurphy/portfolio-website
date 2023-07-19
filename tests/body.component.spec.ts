@@ -19,4 +19,10 @@ describe('BodyComponent', () => {
     expect(component).toBeTruthy();
     expect(component).toBeDefined();
   });
+
+  it('should render this is red in a p tag', () => {
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('p').textContent).toContain('this is red');
+  });
 });
