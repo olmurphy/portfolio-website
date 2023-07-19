@@ -27,7 +27,6 @@
           "error",
           {
             "type": "element",
-            "prefix": "app",
             "style": "kebab-case"
           }
         ],
@@ -37,7 +36,14 @@
         "no-constant-condition": ["error"],
         "block-spacing": "error",
         "space-before-blocks": "error",
-        "brace-style": "error"
+        "brace-style": "error",
+        "indent": ["error", 2],
+        "no-unexpected-multiline": "error",
+        "semi": ["error", "always"],
+        "no-trailing-spaces": "error",
+        "keyword-spacing": ["error", 
+          { "after": true }
+        ]
       }
     },
     {
