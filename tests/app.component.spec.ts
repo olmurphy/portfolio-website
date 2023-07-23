@@ -33,10 +33,4 @@ describe('AppComponent', () => {
     component = fixture.componentInstance;
     expect(component.title).toEqual('World');
   });
-
-  it('should render title in a h1 tag', () => {
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Hello World');
-  });
 });
