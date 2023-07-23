@@ -1,15 +1,19 @@
-$social-links-margin: 1rem;
+$social-links-margin: .5rem;
+$nav-links-margin: 1rem;
 $link-hover-color: lightblue;
+$nav-container-height: 5rem;
 
 .navigation-container {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
     position: relative;
+    height: $nav-container-height;
 }
 
 .name {
+    font-size: 3rem; 
 }
 
 .nav-links ul {
@@ -18,7 +22,7 @@ $link-hover-color: lightblue;
 
     li {
         cursor: pointer;
-        margin: 0 $social-links-margin 0 $social-links-margin;
+        margin: 0 $nav-links-margin 0 $nav-links-margin;
 
         &:hover {
             background-color: $link-hover-color;
@@ -29,6 +33,7 @@ $link-hover-color: lightblue;
 
 .social-links ul {
     display: flex;
+    margin-right: 2rem;
 
     li {
         cursor: pointer;
@@ -38,6 +43,11 @@ $link-hover-color: lightblue;
             background-color: $link-hover-color
 
         }
+    }
+
+    .contact {
+        margin-right: 1rem;
+        text-transform: uppercase;
     }
 }
 
